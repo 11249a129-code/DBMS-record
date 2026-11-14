@@ -1,0 +1,58 @@
+Aim
+To create a database, create tables, insert records into the tables, and write SQL
+queries to retrieve information from the database.
+
+SQL Program
+Create Database
+CREATE DATABASE CollegeDB;
+Use Database
+USE CollegeDB;
+Create Table
+CREATE TABLE Student(
+StudentID INT PRIMARY KEY,
+StudentName VARCHAR(30),
+Department VARCHAR(20),
+Age INT,
+CGPA DECIMAL(3,2)
+);
+Insert Records
+INSERT INTO Student VALUES
+(101,'Anu','CSE',20,8.90),
+(102,'Bala','ECE',21,8.50),
+(103,'Charles','IT',20,9.10),
+(104,'Divya','CSE',22,8.70),
+(105,'Esha','AIDS',21,9.20);
+Retrieve All Records
+SELECT * FROM Student;
+CSE Students
+SELECT * FROM Student WHERE Department='CSE';
+CGPA > 8.8
+SELECT * FROM Student WHERE CGPA>8.8;
+Sort by CGPA
+SELECT * FROM Student ORDER BY CGPA DESC;
+Count Students
+SELECT COUNT(*) AS TotalStudents FROM Student;
+Average CGPA
+SELECT AVG(CGPA) FROM Student;
+
+Expected Output
+StudentID StudentName Department Age CGPA
+101 Anu CSE 20 8.90
+102 Bala ECE 21 8.50
+103 Charles IT 20 9.10
+104 Divya CSE 22 8.70
+105 Esha AIDS 21 9.20
+
+Practice the question:
+Create a Employee Database : A software company maintains employee
+information, including employee ID, name, department, designation,
+salary, and joining date.
+1. Create a database named EmployeeDB.
+2. Create an Employee table.
+3. Insert five employee records.
+4. Write SQL queries to:
+o Display all employees.
+o Display employees working in the HR department.
+o Display employees with salary greater than ₹50,000.
+o Display employees in ascending order of salary.
+o Find the maximum salary.
